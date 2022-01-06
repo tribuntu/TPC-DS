@@ -55,6 +55,12 @@ Install the dependencies on `mdw` for compiling the `dsdgen` (data generation) a
 yum -y install gcc make
 ```
 
+Note:  If you are using Photon OS, then you need:
+
+```bash
+yum -y install build-essential
+```
+
 The original source code is from http://tpc.org/tpc_documents_current_versions/current_specifications5.asp.
 
 ## Usage
