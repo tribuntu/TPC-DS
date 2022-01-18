@@ -107,9 +107,7 @@ EXPLAIN_ANALYZE="false"
 RANDOM_DISTRIBUTION="false"
 ```
 
-If the `tpcds_variables.sh` is missing, `tpcds.sh` will generate one with default values.
-
-Then rerun the `tpcds.sh` to proceed.
+`tpcds.sh` will validate existence those variables.
 
 #### Environment Options
 
