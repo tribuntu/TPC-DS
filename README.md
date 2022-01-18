@@ -107,7 +107,7 @@ EXPLAIN_ANALYZE="false"
 RANDOM_DISTRIBUTION="false"
 ```
 
-`tpcds.sh` will validate existence those variables.
+`tpcds.sh` will validate existence of those variables.
 
 #### Environment Options
 
