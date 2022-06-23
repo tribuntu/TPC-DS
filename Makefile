@@ -16,7 +16,7 @@ lint:
 
 .PHONY: lint-error-ci
 lint-error-ci:
-	find . -name "*.sh" -not -path './00_compile_tpcds/t*' | xargs shellcheck -S error
+	find . -name "*.sh" -not -path './00_compile_tpcds/t*' | grep -v 'tpcds_variables.sh' | xargs shellcheck -S error
 
 .PHONY: super-linter
 super-linter:
