@@ -13,6 +13,7 @@ Just change the value of `$PGDATABSE` variable in `tpcds_variables.sh` file
 
 - [VMware Tanzu Greenplum](https://network.tanzu.vmware.com/products/vmware-tanzu-greenplum/) `4.3.x`, `5.x`, `6.x`
 - [Open Source Greenplum Databases](https://network.tanzu.vmware.com/products/greenplum-database/) `5.x`, `6.x`
+- [Arenadata DB](https://arenadata.tech/products/arenadata-db/) tested with `6.x`
 
 ### Supported TPC-DS Versions
 
@@ -34,7 +35,7 @@ These are the combined versions of TPC-DS and Greenplum:
 ### Prerequisites
 
 1. A running Greenplum Database with `gpadmin` access
-2. `gpadmin` database is created
+2. `gpadmin` database is created (you can swith to other database in [tpcds_variables.sh](https://github.com/tribuntu/TPC-DS/blob/main/tpcds_variables.sh))
 3. `root` access on the master node `mdw` for installing dependencies
 4. `ssh` connections between `mdw` and the segment nodes `sdw1..n`
 
@@ -59,13 +60,13 @@ The original source code is from http://tpc.org/tpc_documents_current_versions/c
 
 ### Download and Install
 
-Visit the repo at https://github.com/pivotal/TPC-DS/releases and download the tarball to the `mdw` node.
+Visit the repo at https://github.com/tribuntu/TPC-DS/releases and download the tarball to the `mdw` node.
 
 ```bash
 ssh gpadmin@mdw
-curl -LO https://github.com/pivotal/TPC-DS/archive/refs/tags/v3.5.0.tar.gz
-tar xzf v3.5.0.tar.gz
-mv TPC-DS-3.5.0 TPC-DS
+curl -LO https://github.com/tribuntu/TPC-DS/archive/refs/tags/v3.5.1.tar.gz
+tar xzf v3.5.1.tar.gz
+mv TPC-DS-3.5.1 TPC-DS
 ```
 
 ## Usage
@@ -84,7 +85,7 @@ By default, it will run a scale 1 (1G) and with 2 concurrent users, from data ge
 
 By changing the `tpcds_variables.sh`, we can control how this benchmark will run.
 
-This is the default example at [tpcds_variables.sh](https://github.com/pivotal/TPC-DS/blob/main/tpcds_variables.sh)
+This is the default example at [tpcds_variables.sh](https://github.com/tribuntu/TPC-DS/blob/main/tpcds_variables.sh)
 
 ```shell
 # environment options
