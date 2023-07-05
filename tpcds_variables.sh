@@ -7,6 +7,7 @@ export BENCH_ROLE="dsbench"
 export PGPORT="5432"
 # to connect through pgbouncer
 # export PGPORT="6543"
+export PGDATABASE="adb"
 # Add additional PostgreSQL refer:
 # https://www.postgresql.org/docs/current/libpq-envars.html
 
