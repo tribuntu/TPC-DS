@@ -1,10 +1,12 @@
-Pipeline Status: ![CommitStatus](https://github.com/pivotal/TPC-DS/actions/workflows/main.yml/badge.svg)
----
-
 # Decision Support Benchmark for Greenplum database.
 
 This is the decision support (DS) benchmark derived from [TPC-DS](http://tpc.org/tpcds/).
 This repo contains automation of running the DS benchmark against an existing Greenplum cluster.
+
+---
+This fork of the [original Pivotal TPC-DS repository](https://github.com/pivotal/TPC-DS) contains an additional environment variable $PGDATABSE to support databases other than gpadmin.
+
+Just change the value of `$PGDATABSE` variable in `tpcds_variables.sh` file
 
 ## Context
 ### Supported Greenplum Versions
@@ -132,6 +134,8 @@ In most cases, we just leave them to the default.
 
 ```shell
 export PGPORT="6543"
+# You can change DB name here
+export PGDATABASE="adb"
 # Add additional PostgreSQL refer:
 # https://www.postgresql.org/docs/current/libpq-envars.html
 ```
